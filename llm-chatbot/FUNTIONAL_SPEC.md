@@ -3,17 +3,15 @@
 ### main()
 * Description: Takes the inputs from user and directs them to the chatbot as prompts
 
-### setupConnection()
-* Inputs: Base prompt string
+### setup_connection()
 * Outputs: client
-* Description: Gets the API key from env variables and creates the client object. This function also creates a base promt to provide context to the llm.
+* Description: Sets up the connection to the llm with the system prompt.
 
-### send Request()
-* Inputs: request prompt from the user
-* Outputs: The response from the llm
-* Description: Saves the request to the prompt list and sends the request. The reponse is then saved to the prompt list to keep adding to the context of the chat.
+### get_response()
+* Inputs: client, userstr
+* Description: Gets the response from the AI assistant and parses it for the user. The prompts are saved using the save_prompt() method
 
-### savePrompt()
+### save_prompt()
 * Inputs: prompt string
 * Outputs: N/A
 * Description: Saves the prompt or response to the prompt list
